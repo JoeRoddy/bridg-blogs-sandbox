@@ -1,6 +1,5 @@
 import { getUserId } from '@/pages/_app';
 import { useAsync } from '@/pages/hooks/useAsync';
-import { useBridg } from '@/pages/hooks/useBridg';
 import db from 'bridg/app/client/db';
 import { NextPage } from 'next';
 import { useRouter } from 'next/router';

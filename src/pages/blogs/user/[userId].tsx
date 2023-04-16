@@ -1,9 +1,7 @@
-import { NextPage } from 'next';
-import db from 'bridg/app/client/db';
-
 import BlogList from '@/pages/components/blogs/BlogList';
 import { useAsync } from '@/pages/hooks/useAsync';
-import { getUserId } from '@/pages/_app';
+import db from 'bridg/app/client/db';
+import { NextPage } from 'next';
 import { useRouter } from 'next/router';
 
 interface Props {}
@@ -18,7 +16,6 @@ const Blogs: NextPage<Props> = ({}) => {
       }),
     [userId],
   );
-  console.log('user', user);
 
   return user ? (
     <div>

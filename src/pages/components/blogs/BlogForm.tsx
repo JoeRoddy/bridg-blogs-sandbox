@@ -1,5 +1,4 @@
 import { useState } from 'react';
-
 import { Prisma } from '@prisma/client';
 
 interface Props {
@@ -36,4 +35,5 @@ const BlogForm = ({ defaultValues, onSubmit, onCancel }: Props) => {
     </form>
   );
 };
+
 export default BlogForm;

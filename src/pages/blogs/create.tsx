@@ -8,16 +8,14 @@ const CreateBlogPage: NextPage<{}> = ({}) => {
   const router = useRouter();
 
   return (
-    <>
-      <BlogForm
-        onSubmit={async (blog) => {
-          const newBlog = await db.blog.create({
-            data: { ...blog, userId: getUserId() },
-          });
-          router.push(`/blogs/${newBlog.id}`);
-        }}
-      />
-    </>
+    <BlogForm
+      onSubmit={async (blog) => {
+        const newBlog = await db.blog.create({
+          data: { ...blog, userId: getUserId() },
+        });
+        router.push(`/blogs/${newBlog.id}`);
+      }}
+    />
   );
 };
 

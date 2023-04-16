@@ -1,11 +1,11 @@
-import db from 'bridg/app/client/db';
-import { NextPage } from 'next';
 import BlogList from '@/pages/components/blogs/BlogList';
 import { useAsync } from '@/pages/hooks/useAsync';
+import db from 'bridg/app/client/db';
+import { NextPage } from 'next';
 
 interface Props {}
 
-const Blogs: NextPage<Props> = ({}) => {
+const AllBlogs: NextPage<Props> = ({}) => {
   const blogs = useAsync(() =>
     db.blog.findMany({
       where: { published: true },
@@ -21,4 +21,4 @@ const Blogs: NextPage<Props> = ({}) => {
   );
 };
 
-export default Blogs;
+export default AllBlogs;
